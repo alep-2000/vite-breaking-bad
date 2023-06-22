@@ -1,6 +1,6 @@
 <script>
 import AppCard from '../components/AppCard.vue';
-import axios from 'axios';
+import { store } from '../store'
 
 export default {
     components: {
@@ -8,13 +8,8 @@ export default {
     },
     data() {
         return {
-            pokemons: []
+            store
         }
-    },
-    mounted() {
-        axios.get('https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?sort[number]=desc&per=10').then((docs) => {
-            this.pokemons = docs.data.docs
-        })
     }
 }
 </script>
@@ -23,7 +18,7 @@ export default {
     <div class="container-md background-grey d-flex align-items-center">
         <div class="container-sm sub-container">
             <div class="row">
-                <div class="col-6 col-md-2 card d-flex flex-wrap " v-for="(pokemon, index) in pokemons" :key="index">
+                <div class="col-6 col-md-2 card d-flex flex-wrap " v-for="(pokemon, index) in store.pokemons" :key="index">
                     <AppCard :myPokemons="pokemon" />
                 </div>
             </div>

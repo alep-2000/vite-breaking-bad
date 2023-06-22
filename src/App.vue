@@ -2,13 +2,24 @@
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppCard from './components/AppCard.vue'
-
+import axios from 'axios';
+import { store } from './store';
 
 export default {
   components: {
     AppHeader,
     AppMain,
     AppCard
+  },
+  data() {
+    return {
+      store
+    }
+  },
+  mounted() {
+    axios.get(store.apiUrl).then((docs) => {
+      store.pokemons = docs.data.docs
+    })
   }
 }
 </script>
