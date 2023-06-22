@@ -4,9 +4,9 @@ export default {
 }
 </script>
 
-<template lang="">
+<template>
     <div>
-        
+        AppMain
     </div>
 </template>
 
