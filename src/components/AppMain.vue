@@ -39,15 +39,15 @@ export default {
 
 
         .claire {
-            background-color: green;
+            background-color: #DEFDE0;
         }
 
         .red {
-            background-color: red;
+            background-color: #FDDFDF;
         }
 
         .blue {
-            background-color: blue;
+            background-color: #DEF3FD;
         }
     }
 
