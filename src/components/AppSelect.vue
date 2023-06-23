@@ -6,7 +6,7 @@ export default {
 
 <template>
     <div>
-        <select value="" class="form-select mt-4">
+        <select @change="$emit(selectValue)" value="" class="form-select mt-4">
             <option value="" selected>Choose status </option>
             <option value="Electric">Electric</option>
             <option value="Grass">Grass</option>
