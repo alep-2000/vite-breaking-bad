@@ -30,6 +30,7 @@ export default {
 .background-grey {
     background-color: #DEDEDE;
 
+
     .sub-container {
         width: 100%;
         height: 45vh;

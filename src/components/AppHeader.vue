@@ -1,22 +1,28 @@
 <script>
+import AppSelect from './AppSelect.vue';
 export default {
-
+    components: { AppSelect }
 }
 </script>
 
 <template>
-    <div class="container-md d-flex">
-        <div class="circle-blue my-3">
+    <div class="container-md d-flex justify-content-between">
+        <div class="d-flex">
+            <div class="circle-blue my-3">
 
+            </div>
+            <div class="circle-red m-3">
+
+            </div>
+            <div class="circle-yellow my-3 mx-0">
+
+            </div>
+            <div class="circle-green my-3 mx-3">
+
+            </div>
         </div>
-        <div class="circle-red m-3">
-
-        </div>
-        <div class="circle-yellow my-3 mx-0">
-
-        </div>
-        <div class="circle-green my-3 mx-3">
-
+        <div>
+            <AppSelect />
         </div>
     </div>
 </template>
