@@ -29,17 +29,22 @@ export default {
             ]
         }
     }
+    // methods: {
+    //     sendSelect() {
+    //         this.$emit('select')
+    //     }
+    // }
 }
 </script>
 
 <template>
-    <div>
-        <select v-model="store.mainType" class="form-select mt-4" @change="$emit('select', store.mainType)">
+    <span class="d-flex justify-content-end">
+        <select @change="$emit('select')" v-model="store.mainType" class="form-select-lg mt-5 me-5">
             <option value="" selected>Select type</option>
             <option v-for="(category, index) in categories" :key="index" :value="category"> {{
                 category }} </option>
         </select>
-    </div>
+    </span>
 </template>
 
 <style lang="">

@@ -1,9 +1,16 @@
 <script>
+import { store } from '../components/data/store';
 
 
 export default {
+    data() {
+        return {
+            store
+        }
+    },
     props: {
-        myPokemons: Object
+        myPokemons: Object,
+        mainType: String
     }
 }
 </script>

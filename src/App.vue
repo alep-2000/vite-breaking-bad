@@ -19,15 +19,28 @@ export default {
     }
   },
   mounted() {
-    axios.get(store.apiUrl).then((docs) => {
-      store.pokemons = docs.data.docs
-    })
+    this.selectType()
+  },
+  methods: {
+    selectType() {
+      let myUrl = store.apiUrl
+
+      if (store.mainType !== '') {
+        myUrl += `&q[type1]=${store.mainType}`
+      }
+
+
+      axios.get(myUrl).then((docs) => {
+        store.pokemons = docs.data.docs
+      })
+    },
   }
 }
 </script>
 
 <template>
   <div>
+    <AppSelect @select="selectType" />
     <AppHeader />
     <AppMain />
   </div>
