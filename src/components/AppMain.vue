@@ -1,6 +1,6 @@
 <script>
 import AppCard from '../components/AppCard.vue';
-import { store } from '../store'
+import { store } from '../components/data/store'
 
 export default {
     components: {

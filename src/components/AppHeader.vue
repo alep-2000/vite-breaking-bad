@@ -1,7 +1,14 @@
 <script>
 import AppSelect from './AppSelect.vue';
 export default {
-    components: { AppSelect }
+    components: { AppSelect },
+    data() {
+        return {
+            selectType(type) {
+                console.log(type)
+            }
+        }
+    }
 }
 </script>
 
@@ -22,7 +29,7 @@ export default {
             </div>
         </div>
         <div>
-            <AppSelect />
+            <AppSelect @select="selectType" />
         </div>
     </div>
 </template>

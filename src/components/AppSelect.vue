@@ -1,16 +1,43 @@
 <script>
-export default {
+import { store } from '../components/data/store'
 
+
+export default {
+    data() {
+        return {
+            store,
+            categories: [
+                "Bug",
+                "Dark",
+                "Dragon",
+                "Electric",
+                "Fairy",
+                "Fighting",
+                "Fire",
+                "Flying",
+                "Ghost",
+                "Grass",
+                "Ground",
+                "Ice",
+                "Normal",
+                "Poison",
+                "Psychic",
+                "Rock",
+                "Steel",
+                "Water"
+
+            ]
+        }
+    }
 }
 </script>
 
 <template>
     <div>
-        <select @change="$emit(selectValue)" value="" class="form-select mt-4">
-            <option value="" selected>Choose status </option>
-            <option value="Electric">Electric</option>
-            <option value="Grass">Grass</option>
-            <option value="Water">Water</option>
+        <select v-model="store.mainType" class="form-select mt-4" @change="$emit('select', store.mainType)">
+            <option value="" selected>Select type</option>
+            <option v-for="(category, index) in categories" :key="index" :value="category"> {{
+                category }} </option>
         </select>
     </div>
 </template>

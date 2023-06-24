@@ -4,7 +4,7 @@ import AppMain from './components/AppMain.vue'
 import AppCard from './components/AppCard.vue'
 import AppSelect from './components/AppSelect.vue';
 import axios from 'axios';
-import { store } from './store';
+import { store } from './components/data/store';
 
 export default {
   components: {
