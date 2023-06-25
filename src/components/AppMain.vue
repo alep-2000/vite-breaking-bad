@@ -37,19 +37,6 @@ export default {
         overflow-y: scroll;
         background-color: rgb(84, 89, 94);
         background: linear-gradient(90deg, rgba(84, 89, 94, 1) 54%, rgba(125, 129, 133, 1) 100%);
-
-
-        .claire {
-            background-color: #DEFDE0;
-        }
-
-        .red {
-            background-color: #FDDFDF;
-        }
-
-        .blue {
-            background-color: #DEF3FD;
-        }
     }
 
 }
