@@ -28,12 +28,8 @@ export default {
 
             ]
         }
-    }
-    // methods: {
-    //     sendSelect() {
-    //         this.$emit('select')
-    //     }
-    // }
+    },
+
 }
 </script>
 
