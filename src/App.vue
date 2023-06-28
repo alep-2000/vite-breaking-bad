@@ -1,7 +1,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
-import AppCard from './components/AppCard.vue'
 import AppSelect from './components/AppSelect.vue';
 import axios from 'axios';
 import { store } from './components/data/store';
@@ -10,7 +9,6 @@ export default {
   components: {
     AppHeader,
     AppMain,
-    AppCard,
     AppSelect
   },
   data() {

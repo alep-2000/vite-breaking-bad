@@ -31,14 +31,13 @@ export default {
                 "Water"
             ]
         };
-    },
-    components: { AppReset }
+    }
 }
 </script>
 
 <template>
     <span class="d-flex justify-content-end">
-        <select @change="$emit('select')" v-model="store.mainType" class="form-select-lg mt-5 me-5">
+        <select @change="$emit('select')" v-model="store.mainType" class="form-select-lg mt-5 me-3">
             <option value="" selected>Select type</option>
             <option v-for="(category, index) in categories" :key="index" :value="category"> {{
                 category }} </option>
