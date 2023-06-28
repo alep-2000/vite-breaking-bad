@@ -1,8 +1,12 @@
 <script>
 import { store } from '../components/data/store'
+import AppReset from '../components/AppReset.vue';
 
 
 export default {
+    components: {
+        AppReset
+    },
     data() {
         return {
             store,
@@ -26,9 +30,9 @@ export default {
                 "Steel",
                 "Water"
             ]
-        }
+        };
     },
-
+    components: { AppReset }
 }
 </script>
 
@@ -39,6 +43,7 @@ export default {
             <option v-for="(category, index) in categories" :key="index" :value="category"> {{
                 category }} </option>
         </select>
+        <AppReset />
     </span>
 </template>
 
